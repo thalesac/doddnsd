@@ -9,6 +9,9 @@ It provides similar functionality to no-ip, dyndns, etc.
 Clone this repository.
 `git clone https://github.com/thalesac/doddnsd.git`
 
+Install all dependencies:
+`pip install -r requirements`
+
 Verify the *install.sh* file to see if it makes sense in your Linux distro.
 `vim install.sh`
 

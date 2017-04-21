@@ -1,0 +1,13 @@
+[Unit]
+Description=Digital Ocean Dynamic DNS Daemon
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/doddnsd.py -c /etc/doddnsd/doddnsd.conf --daemon
+ExecStop=/usr/local/bin/doddnsd.py -c /etc/doddnsd/doddnsd.conf --stop
+
+
+[Install]
+WantedBy=multi-user.target
